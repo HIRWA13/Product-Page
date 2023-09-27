@@ -1,6 +1,6 @@
 # Product Page in React Js
 
-in this project I teamed up with [Kevine Mugisha](https://github.com/kevinemug) to build this simple product page in react js.
+in this project I am teaming up with [Kevine Mugisha](https://github.com/kevinemug) to build this simple product page in react js.
 
 you can find our progress on linkedin [Junior Hirwa](https://www.linkedin.com/in/hirwajr/) and [Kevine Mugisha](https://www.linkedin.com/in/kevine-mugisha-b7387b230/) where we will be talking about the project and how we will be building it.
 
