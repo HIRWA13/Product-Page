@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import ImagesSection from "./components/imagesSection/ImagesSection"
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className="font-KumbBold text-5xl">welcome</h1>
+        <ImagesSection/>
     </>
   )
 }
