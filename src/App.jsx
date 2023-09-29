@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1 className='text-xl bg-red-500'>welcome</h1>
+      <h1 className="font-KumbBold text-5xl">welcome</h1>
     </>
   )
 }
