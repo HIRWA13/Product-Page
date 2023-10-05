@@ -3,7 +3,7 @@ export default {
       "company":"sneaker company",
       "title": "fall limited edition sneakers",
       "description": "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.",
-      "newPrice": 0,
+      "newPrice": 125,
       "discount": 50,
       "oldPrice": 250,
       "images": [
