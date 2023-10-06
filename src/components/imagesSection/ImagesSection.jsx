@@ -17,7 +17,7 @@ export default function ImagesSection() {
 
     return(
         <>
-            <section className="w-2/4">
+            <section className="w-full">
                 <img src={`/images/${cover}`} className="p-2 rounded-2xl"/>
                 <div className="w-full grid grid-cols-4 gap-3 p-2 mt-2">
                     {images}
