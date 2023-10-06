@@ -2,7 +2,7 @@ import { useState } from "react"
 import item from "../../assets/itemData/item"
 
 const activeStyles = {
-   opacity: 0.6
+   opacity: 0.5
 }
 
 export default function ImagesSection() {

@@ -3,12 +3,12 @@ import { useState } from "react";
 import item from "../../assets/itemData/item";
 
 export default function Aside() {
-  const [cartCount, setCartCount] = useState(0)
+  const [cartCount, setCartCount] = useState(1)
   const increaseCartCount = () => {
     setCartCount(prevCount => prevCount >= 0 ? cartCount + 1 : 0)
   }
   const decreaseCartCount = () => {
-    setCartCount(prevCount => prevCount > 0 ? cartCount - 1 : 0)
+    setCartCount(prevCount => prevCount > 1 ? cartCount - 1 : 1)
   }
   const data = item.data;
   return (
