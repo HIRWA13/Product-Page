@@ -1,6 +1,10 @@
 import { useState } from "react"
 import item from "../../assets/itemData/item"
 
+const activeStyles = {
+   opacity: 0.6
+}
+
 export default function ImagesSection() {
     const [cover, setCover] = useState("image-product-1.jpg")
     const imageData = item.data.images
@@ -9,10 +13,10 @@ export default function ImagesSection() {
         return <img 
                     key={index} 
                     src={`/images/${image}`}
-                    className="rounded-lg opacity-90 hover:opacity-50 active:opacity-100"
+                    className="rounded-lg opacity-90 hover:opacity-50 active:opacity-100 cursor-pointer"
                     onClick={()=> setCover(`${image}`)}
+                    style={image === cover ? activeStyles: null}
                     />
-
     })
 
     return(
