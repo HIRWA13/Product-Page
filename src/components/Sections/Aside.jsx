@@ -2,6 +2,10 @@ import { useState } from "react";
 
 import item from "../../assets/itemData/item";
 
+const countStyles = {
+  color: "rgba(0, 0, 0, 0.8)",
+}
+
 export default function Aside() {
   const [cartCount, setCartCount] = useState(1)
   const increaseCartCount = () => {
@@ -13,7 +17,7 @@ export default function Aside() {
   const data = item.data;
   return (
     <>
-      <aside className="mt-10 px-2 space-y-2">
+      <aside className="mt-10 px-2 space-y-2 select-none">
         <h1 className="text-sm uppercase text-primaryOrange font-KumbBold opacity-80">{data.company}</h1>
         <h2 className="text-4xl font-KumbBold capitalize opacity-80">{data.title}</h2>
         <p className="text-lg opacity-60 w-3/4">{data.description}</p>
@@ -24,11 +28,11 @@ export default function Aside() {
         <p className="text-xl opacity-40 font-KumbBold line-through">${data.oldPrice}</p>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-6 bg-lightGrayishBlue rounded-lg">
-            <div className="text-2xl py-2 px-2 opacity-70 font-bold cursor-pointer select-none" onClick={decreaseCartCount}>-</div>
-            <div className="text-2xl py-2 px-1 opacity-70 font-bold select-none">{cartCount}</div>
-            <div className="text-2xl py-2 px-2 opacity-70 font-bold cursor-pointer select-none" onClick={increaseCartCount}>+</div>
+            <div className="text-2xl py-2 px-2 opacity-70 font-bold cursor-pointer select-none text-primaryOrange" onClick={decreaseCartCount} style={cartCount === 1 ? countStyles : null}>-</div>
+            <div className="text-2xl py-2 px-1 opacity-70 font-bold select-none w-10 text-center">{cartCount}</div>
+            <div className="text-2xl py-2 px-2 opacity-70 font-bold cursor-pointer select-none text-primaryOrange" onClick={increaseCartCount}>+</div>
           </div>
-          <button className="py-3 px-16 bg-primaryOrange text-white rounded-lg font-KumbBold">add to cart</button>
+          <button className="py-3 px-16 bg-primaryOrange text-white rounded-lg font-KumbBold">Add to cart</button>
         </div>
       </aside>
     </>
