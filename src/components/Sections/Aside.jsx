@@ -7,10 +7,9 @@ const countStyles = {
   color: "rgba(0, 0, 0, 0.8)",
 }
 
-export default function Aside() {
+export default function Aside(props) {
   const [cartCount, setCartCount] = useState(1)
   const [cartItem, setCartItem] = useState({})
-  const [isVisible, setIsVisible] = useState(false)
 
   const increaseCartCount = () => {
     setCartCount(prevCount => prevCount >= 0 ? cartCount + 1 : 0)
@@ -28,10 +27,6 @@ export default function Aside() {
           image: data.images[0]
         }
     })
-  }
-
-  const cartModalHandler = () => {
-    setIsVisible(prevView => !prevView)
   }
   
   return (
@@ -57,7 +52,7 @@ export default function Aside() {
               >Add to cart</button>
         </div>
       </aside>
-      <CartModal cartItem={cartItem} item={item} cartCount={cartCount}/>
+      {props.isVisible && <CartModal cartItem={cartItem} item={item} cartCount={cartCount}/>}
     </>
   );
 }
