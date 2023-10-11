@@ -3,10 +3,10 @@ export default function CartModal({ cartItem, cartCount }) {
     <>
       <article className="p-2 py-4 absolute right-8 top-20 bg-gray-100 shadow-xl w-80 flex flex-col items-center gap-2 rounded-md">
         <div className="w-full">
-          <h1 className="p-1 w-full">cart</h1>
+          <h1 className="p-1 w-full text-base font-semibold capitalize">cart</h1>
           <hr />
         </div>
-        {cartItem.name && (
+        {cartItem.name !== undefined ? (
           <div className="mt-1">
             <div className="flex gap-4">
               <div>
@@ -23,7 +23,8 @@ export default function CartModal({ cartItem, cartCount }) {
               Checkout
             </button>
           </div>
-        )}
+        ) : <h1>The cart is empty now</h1>
+      }
       </article>
     </>
   );
