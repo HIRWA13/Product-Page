@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header(props) {
   const links = ["collections", "Men", "Women", "About", "Contact"];
   return (
     <>
@@ -22,7 +22,12 @@ export default function Header() {
 
         <div className="flex gap-3 md:gap-16 items-center ">
           <div>
-            <img src="/images/icon-cart.svg" alt="cart icon" className="cursor-pointer"/>
+            <img 
+                src="/images/icon-cart.svg" 
+                alt="cart icon" 
+                className="cursor-pointer"
+                onClick={props.cartModalHandler}
+                />
           </div>
           <div className=" w-[30px] lg:w-[50px]">
             <img
