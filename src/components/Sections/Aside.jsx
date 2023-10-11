@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import item from "../../assets/itemData/item";
+import CartModal from "./CartModal";
 
 const countStyles = {
   color: "rgba(0, 0, 0, 0.8)",
@@ -9,6 +10,8 @@ const countStyles = {
 export default function Aside() {
   const [cartCount, setCartCount] = useState(1)
   const [cartItem, setCartItem] = useState({})
+  const [isVisible, setIsVisible] = useState(false)
+
   const increaseCartCount = () => {
     setCartCount(prevCount => prevCount >= 0 ? cartCount + 1 : 0)
   }
@@ -25,8 +28,12 @@ export default function Aside() {
           image: data.images[0]
         }
     })
-    console.log(cartItem)
   }
+
+  const cartModalHandler = () => {
+    setIsVisible(prevView => !prevView)
+  }
+  
   return (
     <>
       <aside className="mt-10 px-2 space-y-2 select-none">
@@ -46,9 +53,11 @@ export default function Aside() {
           </div>
           <button 
               onClick={cartHandler}
-              className="md:py-3 md:px-16 bg-primaryOrange text-white rounded-lg font-KumbBold">Add to cart</button>
+              className="md:py-3 md:px-16 bg-primaryOrange text-white rounded-lg font-KumbBold"
+              >Add to cart</button>
         </div>
       </aside>
+      <CartModal cartItem={cartItem} item={item} cartCount={cartCount}/>
     </>
   );
 }
