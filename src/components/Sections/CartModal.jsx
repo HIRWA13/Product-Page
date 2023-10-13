@@ -16,7 +16,7 @@ export default function CartModal({ cartItem, cartCount }) {
                 <h1 className="p-1 text-base font-thin">{cartItem.name}</h1>
                 <h1 className="p-1 text-base font-thin">{`${
                   cartItem.price
-                } * ${cartCount} ${cartItem.price * cartCount}`}</h1>
+                } x ${cartCount}`}  <span className="font-semibold">${cartItem.price * cartCount}</span></h1>
               </div>
             </div>
             <button className=" w-full bg-primaryOrange text-white p-2 rounded-md font-KumbBold mt-2">
