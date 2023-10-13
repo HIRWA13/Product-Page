@@ -7,7 +7,7 @@ export default function Main(props) {
     <>
         <section className="w-3/5 mx-auto flex item-center  justify-around mt-10 gap-20">
             <ImagesSection/>
-            <Aside isVisible={props.isVisible}/> 
+            <Aside isVisible={props.isVisible}/>
         </section>
     </>
   )
