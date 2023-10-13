@@ -1,4 +1,5 @@
 import { useState } from "react";
+import RightPopUp from "../PopUp/PopUp";
 
 import item from "../../assets/itemData/item";
 import CartModal from "./CartModal";
@@ -7,9 +8,12 @@ const countStyles = {
   color: "rgba(0, 0, 0, 0.8)",
 }
 
+
 export default function Aside(props) {
   const [cartCount, setCartCount] = useState(1)
   const [cartItem, setCartItem] = useState({})
+  const [popUp, setPopUp] = useState(false)
+
 
   const increaseCartCount = () => {
     setCartCount(prevCount => prevCount >= 0 ? cartCount + 1 : 0)
@@ -53,6 +57,7 @@ export default function Aside(props) {
         </div>
       </aside>
       {props.isVisible && <CartModal cartItem={cartItem} item={item} cartCount={cartCount}/>}
+      <RightPopUp/>
     </>
   );
 }
