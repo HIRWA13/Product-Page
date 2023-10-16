@@ -2,8 +2,8 @@ export default function Header(props) {
   const links = ["collections", "Men", "Women", "About", "Contact"];
   return (
     <>
-      <div className="flex justify-between items-center w-[80%] mx-auto mt-2 font-KumbRegular">
-        <div className="flex gap-4 items-center md:gap-20 ">
+      <div className="flex justify-between items-center md:w-[80%] mx-auto mt-2 font-KumbRegular">
+        <div className="flex gap-4 items-center md:gap-20">
           <div className="md:hidden">
             <img src="/images/icon-menu.svg"/>
           </div>
@@ -20,7 +20,7 @@ export default function Header(props) {
           </ul>
         </div>
 
-        <div className="flex gap-3 md:gap-16 items-center ">
+        <div className="flex gap-3 md:gap-16 items-center relative">
           <div>
             <img 
                 src="/images/icon-cart.svg" 
