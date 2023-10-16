@@ -5,9 +5,9 @@ export default function Main(props) {
   
   return (
     <>
-        <section className="w-3/5 mx-auto flex item-center  justify-around mt-10 gap-20">
+        <section className="py-4 md:w-3/5 mx-auto grid grid-cols-1 md:grid-cols-2 md:mt-10 md:gap-20">
             <ImagesSection/>
-            <Aside isVisible={props.isVisible}/>
+            <Aside isVisible={props.isVisible} />
         </section>
     </>
   )
