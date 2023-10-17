@@ -13,7 +13,10 @@ export default function Header(props) {
             </div>
             <ul className=" hidden md:flex  gap-10 text-sm  text-darkishGreyBlue ">
               {links.map((link) => (
-                <li className="hover:text-neutralDarkBlue " key={link}>
+                <li
+                  className="cursor-pointer hover:text-neutralDarkBlue"
+                  key={link}
+                >
                   {link}
                 </li>
               ))}
