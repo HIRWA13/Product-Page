@@ -3,7 +3,6 @@ import RightPopUp from "../PopUp/PopUp";
 
 import item from "../../assets/itemData/item";
 import CartModal from "./CartModal";
-import CartCount from "./CartCount";
 
 const countStyles = {
   color: "rgba(0, 0, 0, 0.8)",
@@ -46,7 +45,7 @@ export default function Aside(props) {
 
   return (
     <>
-      <aside className="md:mt-10 p-4 md:space-y-6 border-2">
+      <aside className="md:mt-10 p-4 md:space-y-6">
         <h1 className="text-sm uppercase text-primaryOrange font-KumbBold opacity-80">
           {data.company}
         </h1>
@@ -99,7 +98,6 @@ export default function Aside(props) {
         <CartModal cartItem={cartItem} item={item} cartCount={cartCount} />
       )}
       <RightPopUp update={ref} />
-      <CartCount cartCount={cartCount} cartItem={cartItem} show={countRef} />
     </>
   );
 }
