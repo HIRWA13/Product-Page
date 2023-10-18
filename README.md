@@ -10,15 +10,6 @@ we will be imitating this design from [frontendmentor.com](https://www.frontendm
 
 This is a simple product page in React Js. It is a responsive page. It is a single page application. It is a product page where you can see the product details and add to cart. You can also see the cart details. You can also remove the product from the cart. You can also increase or decrease the quantity of the product in the cart. You can also see the total price of the products in the cart. You can also see the total quantity of the products in the cart. You can also see the total price of the products in the cart. You can also see the total quantity of the products in the cart. You can also see the total price of the products in the cart. You can also see the total quantity of the products in the cart. You can also see the total price of the products in the cart. You can also see the total quantity of the products in the cart. You can also see the total price of the products in the cart. You can also see the total quantity of the products in the cart. You can also see the total price of the products in the cart. You can also see the total quantity of the products in the cart.
 
-## Screenshots
-
-### Desktop:
-![active-states-basket-filled](https://github.com/HIRWA13/Product-Page/assets/117777634/73be094a-e33b-4953-bf89-7178ce6099b4)
-
-### Mobile:
-![mobile-design-basket-filled](https://github.com/HIRWA13/Product-Page/assets/117777634/f43a3fd8-b2a6-4764-904a-101c0642c9ec)
-![mobile-design](https://github.com/HIRWA13/Product-Page/assets/117777634/0f66c4fe-8dea-4199-9e5c-ed28e1ed5ac9)
-
 
 ## Technologies
 
