@@ -1,13 +1,20 @@
-import { useState } from 'react'
+import { useState } from "react";
+
+import Main from "./components/Sections/Main";
+import Header from "./components/Header/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isVisible, setIsVisible] = useState(false);
+  const cartModalHandler = () => {
+    setIsVisible((prevView) => !prevView);
+  };
 
   return (
     <>
-      <h1 className='text-xl bg-red-500'>welcome</h1>
+      <Header cartModalHandler={cartModalHandler} />
+      <Main isVisible={isVisible} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
